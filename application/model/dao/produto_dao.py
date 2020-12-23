@@ -1,17 +1,22 @@
-from application.model.entity.Produto import Produto 
-from application import listaEstatua
+from application.model.entity.Produto import Produto
+import json 
+
+
 
 class ProdutoDAO:
     def __init__(self):
-        self._listaEstatua = listaEstatua 
+        self._produto_list=[]         
 
-    def listar_produtos(self):
-        return self._listaEstatua
-
-    def buscar_por_id(self, id):
-        for produto in range(0, len(self._listaEstatua)):
-            if self._listaEstatua[produto].get_id() == int(id):
-                return self._listaEstatua[produto]
-        return None 
+    def buscar_todos(self):
+        with open('C:\\Users\\anton\\Desktop\\trabalho p1\\T-ssio-p2-\\products.json') as product_file:
+            product_list = json.load(product_file)
+        for product in product_list:
+            self._produto_list.append(Produto(product['id'], product['image'], product['name'], product['description'], product['oldPrice'], product['price'], product['installments']['value'], product['installments']["count"]))
+        return self._produto_list
         
+
+
+       
+
+   
 
