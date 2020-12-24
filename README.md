@@ -1,1 +1,1 @@
-T-ssio-p2-
+No projeto da p2 da disciplina de laboratório de programação de interface com o usúario ensinada pelo professor Tássio foi feita o Front end e o back end. No caso do back end só não foi feita a parte do Ajax, pois eu não sabia como fazer e no caso do front end só não foi feita a parte do corte header, pois não consegui colocá la no projeto. 
